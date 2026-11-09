@@ -1,5 +1,5 @@
 #Lihtne if
-from curses.ascii import isalpha
+
 
 
 x = -5 # testimiseks kirjuta siia mõni arv
