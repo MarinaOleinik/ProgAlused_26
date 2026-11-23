@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>8e0ac51c-d243-471e-8cc6-74df1c7f214b</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Too_2_1.py</StartupFile>
+    <StartupFile>Töö_3_1.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,10 +22,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Praktiline_too.py" />
+    <Compile Include="Põhi.py" />
     <Compile Include="Teema_1_Lin_prog.py" />
     <Compile Include="Teema_2_Valikud.py" />
+    <Compile Include="Teema_3_Kordused.py" />
     <Compile Include="Too1_1.py" />
     <Compile Include="Too_2_1.py" />
+    <Compile Include="Töö_3_1.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="algoritm.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
