@@ -1,10 +1,16 @@
+
 while True:
-    print("Vali ülesanne:")
-    print("1. Täisarvude loendamine")
-    print("2. Naturaalarvude summa")
-    print("3. Positiivsete arvude korrutis")
-    print("4. Arvude ruudud")
-    print("5. Negatiivsete arvude summa")
+    print("""
+          1. Täisarvude loendamine
+          2. Naturaalarvude summa
+          3. Positiivsete arvude korrutis
+          4. Arvude ruudud
+          5. Negatiivsete arvude summa
+          6.Klaviatuurilt sisestatakse N arvu.
+            Koosta programm, mis määrab sisestatud arvude seast:
+            negatiivsete arvude arvu,
+            positiivsete arvude arvu,
+            nullide arvu.(N väärtus sisestatakse klaviatuurilt.)""")
     valik=input("Sisesta ülesande number (1-5) või 'q' väljumiseks: ")
     if valik == '1':
         # 1️
@@ -19,7 +25,7 @@ while True:
                 kogus += 1
             i += 1
         print("Täisarve:", kogus)
-    elif valik == '2': 
+    elif valik == '2':
         i = 0  # loendur
         kogus = 0  # naturaalarvude summa
         while i < 15:
@@ -33,7 +39,7 @@ while True:
         # Sisestatakse 8 arvu.
         # Leida nende korrutis (ainult positiivsete arvude puhul).
         korrutis = 1
-        for i in range(8):
+        for i in range(0,8,1):
             arv = float(input(f"{i + 1}. arv: "))
             if arv > 0:
                 korrutis *= arv
@@ -60,6 +66,27 @@ while True:
 
         except ValueError:
             print("Palun sisesta kehtiv täisarv.")
+    elif valik == '6':
+        while True:
+            try:
+                N = int(input("Sisesta arv N > 0: "))
+                if N > 0: break
+            except ValueError:
+                print("Palun sisesta kehtiv täisarv.")
+                continue
+        for i in range(N):
+            while True:
+                try:
+                    arv = float(input(f"{i + 1}. arv: "))
+                    break
+                except ValueError:
+                    print("Palun sisesta kehtiv arv.")
+            if arv < 0:
+                print("Negatiivne arv")
+            elif arv > 0:
+                print("Positiivne arv")
+            else:
+                print("Null")
     elif valik.lower() == 'q':
         print("Programmist väljumine...")
         break
